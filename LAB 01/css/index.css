@@ -1,0 +1,38 @@
+body{
+    padding-top: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+#info{
+    margin-left: 400px;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#info iframe{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(67, 99, 158);
+}
+
+#esqueleto{
+    justify-items: center;
+}
+
+.lista img{
+    width: 200px;
+    padding-bottom: 50px;
+}
+
+.lista li{
+    padding-bottom: 20px;
+}
+
+hr{
+    
+    width: 50%;
+}
