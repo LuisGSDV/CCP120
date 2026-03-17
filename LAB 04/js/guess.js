@@ -1,7 +1,12 @@
+form = document.getElementById("form")
 
+form.addEventListener("submit", function(e){
 
-function adivinhar(){
+    event.preventDefault();
+
+    const div = document.getElementById("resultado");
     const inp = document.getElementById("inp");
+    const text = div.querySelectAll("p")
     var n = inp.value;
     
 
@@ -9,10 +14,18 @@ function adivinhar(){
 
         console.log(n)
 
-        x = Math.floor(Math.random(0,1));
-        console.log(x)
+        var x = Math.floor(10*(Math.random(0,1)));
+        console.log(x);
 
-        if(x){
+        if(x >= 0){
+
+            if(x == n){
+
+                div.style.backgroundColor = "green"
+
+            } else{
+                div.style.backgroundColor = "red"
+            }
 
         }else {
             console.log("x não localizado")
@@ -21,6 +34,5 @@ function adivinhar(){
     } else{
             console.log("n não localizado")
     }
-}
-//addeventlistener pra evitar carregamento de pagina
 
+    })

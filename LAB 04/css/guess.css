@@ -1,11 +1,22 @@
 form{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto
+    width: 100%
 }
 
 body{
+    justify-items: center;
     width: 98vw;
     height: 98vh;
     background-color: rgb(156, 196, 196);
+}
+
+#resultado{
+    background-color: white ;
+    width: 100%;
+    text-align: center;
+}
+
+#cont{
+    position: relative;
+    width: min-content;
+    margin: 0 auto;
 }

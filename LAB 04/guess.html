@@ -7,12 +7,17 @@
     <title>Adivinhação</title>
 </head>
 <body>
-    <form onsubmit="adivinhar()" >
-        <label for="guess">Escreva um número:</label>
-        <input name="guess" id="inp" type="number">
-        <button type="submit">Enviar</button>
-    </form>
+    <div id="cont">
+        <form id="form" >
+            <label for="guess">Escreva um número:</label><br>
+            <input name="guess" id="inp" type="number">
+            <button type="submit">Enviar</button>
+        </form>
 
+        <div id="resultado">
+            <p>Resultado</p>
+        </div>
+    </div>
     <script src="js/guess.js" type="text/javascript"></script>
 
 </body>
