@@ -1,0 +1,9 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.main-cont{
+    width: 80vw;
+    height: 100%;
+}
