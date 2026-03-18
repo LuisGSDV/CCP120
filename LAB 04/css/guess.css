@@ -1,12 +1,14 @@
 form{
-    width: 100%
+    width: min-content;
+    margin: 0 auto;
 }
 
 body{
-    justify-items: center;
-    width: 98vw;
-    height: 98vh;
     background-color: rgb(156, 196, 196);
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    width: 98vw;
 }
 
 #resultado{
@@ -16,7 +18,17 @@ body{
 }
 
 #cont{
+
     position: relative;
-    width: min-content;
-    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    top: 25%;
+    position: relative;
+    justify-items: center;
+
+}
+
+button{
+    position: relative;
+    width: 100%;
 }

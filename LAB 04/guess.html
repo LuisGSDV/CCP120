@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/guess.css">
+    <link rel="stylesheet" href="css/nav.css">
     <title>Adivinhação</title>
 </head>
 <body>
+
+    <nav>
+        <div class="index">
+            <a href="index.html">Index</a>
+        </div>
+        <div class="projects">
+            <a href="projects.html">Projetos</a>
+        </div>
+    </nav>
+
     <div id="cont">
-        <form id="form" >
+        <form id="form">
             <label for="guess">Escreva um número:</label><br>
             <input name="guess" id="inp" type="number">
             <button type="submit">Enviar</button>
+            <div id="resultado">
+                <p>Resultado</p>
+            </div>
         </form>
-
-        <div id="resultado">
-            <p>Resultado</p>
-        </div>
     </div>
     <script src="js/guess.js" type="text/javascript"></script>
 

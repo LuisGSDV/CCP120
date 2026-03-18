@@ -6,7 +6,7 @@ form.addEventListener("submit", function(e){
 
     const div = document.getElementById("resultado");
     const inp = document.getElementById("inp");
-    const text = div.querySelectAll("p")
+    const texto = div.querySelectorAll("p")
     var n = inp.value;
     
 
@@ -22,9 +22,12 @@ form.addEventListener("submit", function(e){
             if(x == n){
 
                 div.style.backgroundColor = "green"
+                texto.style.setProperty("color: white")
+                
 
             } else{
                 div.style.backgroundColor = "red"
+                texto.style.setProperty("color: white")
             }
 
         }else {
