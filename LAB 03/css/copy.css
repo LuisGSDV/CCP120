@@ -1,9 +1,113 @@
 body{
     display: flex;
     justify-content: center;
+    width: 98vw;
+    background-color: lightgrey;
 }
 
-.main-cont{
+.cont{
     width: 80vw;
     height: 100%;
 }
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    border: 2px solid blue;
+}
+
+header h1{
+    color: darkgreen;
+}
+
+header img{
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+
+nav{
+    display:flex;
+    justify-content: center;
+    justify-content: space space-between;
+    gap: 30px;
+    background-color: skyblue;
+}
+
+nav p{
+    color: darkred;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+   flex-direction: column;
+}
+
+main h3{
+    color: black;
+    margin: 30px auto 30px auto;
+}
+
+main  h3:first-child{
+    
+}
+
+main p{
+    text-align: center;
+    color: indigo;
+}
+
+.img-livros{
+    display: flex;
+    flex-direction: row;
+    height: 25vh;
+    justify-content: center;
+    align-content: space-between;
+    gap: 50px;
+}
+
+.img-livros img{
+    position: relative;
+    height: 100%;
+    
+}
+
+.info-fei{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    gap: 50px;
+}
+
+.info-fei iframe{
+    height: 20vh;
+    width: 20%;
+}
+
+.prof_fei{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border: 2px dashed red;
+    width: max-content;
+}
+
+table td, th{
+    border: 1px solid red;
+    padding: 3px 3px;
+}
+
+th{
+    color: red;
+}
+
+
+
