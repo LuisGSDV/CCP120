@@ -1,6 +1,3 @@
-canvas = document.getElementById('canvas');
-ctx = canvas.getContext('2d');
-
 function quadrado(cor, x, y, tmn){
     ctx.beginPath();
     ctx.fillStyle = cor;
@@ -25,6 +22,9 @@ function semicirculo(x, y, r, c ,f, cor){
     ctx.stroke();
     ctx.closePath();
 }
+
+    canvas = document.getElementById('canvas');
+ctx = canvas.getContext('2d');
 
 semicirculo(250, 250, 120, 1.75, 2, 'green');
 semicirculo(250, 250, 120, 3, 3.25, 'green');

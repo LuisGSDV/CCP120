@@ -121,3 +121,4 @@ canvas.fillStyle = "#318A26";
 canvas.arc(440, 270, 40, 1.5*Math.PI, 3.5*Math.PI);
 canvas.fill();
 canvas.closePath();
+
