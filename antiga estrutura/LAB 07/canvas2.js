@@ -8,12 +8,33 @@ function quadrado(cor, x, y, tmn){
     ctx.closePath();
 }
 
+function bola(x, y, cor, d, borda){
+    ctx.beginPath();
+    ctx.arc(x, y, d, 1.5*Math.PI, 3.5*Math.PI)
+    ctx.strokeStyle = borda;
+    ctx.fillStyle = cor;
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+}
+
+function semicirculo(x, y, r, c ,f, cor){
+    ctx.beginPath();
+    ctx.arc(x, y, r, c*Math.PI , f*Math.PI);
+    ctx.strokeStyle = cor;
+    ctx.stroke();
+    ctx.closePath();
+}
+
+semicirculo(250, 250, 120, 1.75, 2, 'green');
+semicirculo(250, 250, 120, 3, 3.25, 'green');
+semicirculo(250, 250, 80, 3, 2, 'green');
+
+semicirculo(250, 500, 120, 3, 1.5, 'green');
+semicirculo(250, 500, 100, 1.5, 2, 'green');
+
 quadrado("blue", 0, 0, 100)
 quadrado("red", 500-100, 0, 100)
-
-// 1 quadrante
-
-ctx.
 
 // linhas q azul
 
@@ -69,18 +90,7 @@ ctx.closePath();
 
 bola(125, 375, "yellow", 25, "green")
 bola(375, 375, "yellow", 25, "green")
-bola(250, 190, "#00FFFF", 25, "blue")
-
-function bola(x, y, cor, d, borda){
-    ctx.beginPath();
-    ctx.arc(x, y, d, 1.5*Math.PI, 3.5*Math.PI)
-    ctx.strokeStyle = borda;
-    ctx.fillStyle = cor;
-    ctx.fill();
-    ctx.stroke();
-    ctx.closePath();
-}
-
+bola(250, 210, "#00FFFF", 20, "blue")
 bola(250, 500, "#00FFFF", 70, "green")
 
 quadrado("yellow", 0, 400, 50);
@@ -104,3 +114,10 @@ ctx.lineTo(0, 0);
 ctx.stroke();
 ctx.closePath();
 
+// escreve texto
+
+ctx.beginPath();
+ctx.textAlign = 'center';
+ctx.font = "30px Arial";
+ctx.fillText("Canvas", canvas.width / 2, 70);
+ctx.closePath();

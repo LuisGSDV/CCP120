@@ -22,8 +22,8 @@ let sol = {
 
 }
 
-corpo.addEventListener('mousemove', function(e){
-    rect = corpo.getBoundingClientRect();
+document.documentElement.addEventListener('mousemove', function(e){
+    rect = document.documentElement.getBoundingClientRect();
     X_mouse = e.clientX - rect.left;
     Y_mouse = e.clientY - rect.top;
     console.log(X_mouse, Y_mouse);
@@ -32,7 +32,7 @@ corpo.addEventListener('mousemove', function(e){
 })
 
 function animacao(){
-    cp.clearRect();
+    cp.clearRect(0,0, corpo.width, corpo.height);
     sol.desenha();
     requestAnimationFrame(animacao);
 }
