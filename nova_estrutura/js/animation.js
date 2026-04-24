@@ -1,8 +1,5 @@
 canvas = document.getElementById('canvas');
 ctx = canvas.getContext('2d');
-corpo = document.getElementById('cp');
-cp = corpo.getContext('2d');
-
 ctx.beginPath();
 ctx.fillStyle = "blue";
 ctx.fillRect(0, 0, 300, 300);
@@ -22,8 +19,8 @@ let sol = {
 
 }
 
-document.documentElement.addEventListener('mousemove', function(e){
-    rect = document.documentElement.getBoundingClientRect();
+canvas.addEventListener('mousemove', function(e){
+    rect = canvas.getBoundingClientRect();
     X_mouse = e.clientX - rect.left;
     Y_mouse = e.clientY - rect.top;
     console.log(X_mouse, Y_mouse);
@@ -32,7 +29,7 @@ document.documentElement.addEventListener('mousemove', function(e){
 })
 
 function animacao(){
-    cp.clearRect(0,0, corpo.width, corpo.height);
+    ctx.clearRect(0,0);
     sol.desenha();
     requestAnimationFrame(animacao);
 }

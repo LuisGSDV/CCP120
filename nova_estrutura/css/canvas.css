@@ -1,12 +1,14 @@
 body{
+    height: 98vh;
+    width: 98vw;
     display: flex;
     flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
-#canvas2{
-    : 500px;
-}
-
-#canvas{
-    
+#canvas, #canvas2{
+    width: 500px;
+    height:500px;
 }
