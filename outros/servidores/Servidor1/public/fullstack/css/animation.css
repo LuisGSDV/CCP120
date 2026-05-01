@@ -1,0 +1,18 @@
+body{
+    width: 98vw;
+    height: 98vh;
+    background-color: rgb(168, 197, 197);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cp{
+    position: absolute;
+    z-index: 0;
+}
+
+#canvas{
+    position: absolute;
+    z-index: 1;
+}

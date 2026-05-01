@@ -1,0 +1,34 @@
+form{
+    width: min-content;
+    margin: 0 auto;
+}
+
+body{
+    background-color: rgb(156, 196, 196);
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    width: 98vw;
+}
+
+#resultado{
+    background-color: white ;
+    width: 100%;
+    text-align: center;
+}
+
+#cont{
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 25%;
+    position: relative;
+    justify-items: center;
+
+}
+
+button{
+    position: relative;
+    width: 100%;
+}
