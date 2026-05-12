@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Carros</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-link"><a href="projects.html">Projetos</a></div>
+        <div class="nav-link"><a href="/carros">Carros</a></div>
+        <div class="nav-link"><a href="cadastro_carro.html">Novo Carro</a></div>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Gerenciar Carros</h2>
+
+            <section>
+                <h2>Atualizar Carro</h2>
+                <form action="/atualizar_carro" method="post">
+                    <label for="modelo_at">Modelo (para buscar)</label>
+                    <input type="text" name="modelo" id="modelo_at">
+
+                    <label for="marca_at">Nova Marca</label>
+                    <input type="text" name="marca" id="marca_at">
+
+                    <label for="ano_at">Novo Ano</label>
+                    <input type="text" name="ano" id="ano_at">
+
+                    <label for="qtde_at">Nova Quantidade</label>
+                    <input type="number" name="qtde_disponivel" id="qtde_at">
+
+                    <input type="submit" value="Atualizar">
+                </form>
+            </section>
+
+            <section>
+                <h2>Remover Carro</h2>
+                <form action="/remover_carro" method="post">
+                    <label for="modelo_rm">Modelo do carro</label>
+                    <input type="text" name="modelo" id="modelo_rm">
+
+                    <input type="submit" value="Remover">
+                </form>
+            </section>
+        </section>
+    </main>
+
+</body>
+</html>

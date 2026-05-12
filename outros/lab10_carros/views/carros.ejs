@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-link"><a href="projects.html">Projetos</a></div>
+        <div class="nav-link"><a href="/carros">Carros</a></div>
+        <div class="nav-link"><a href="cadastro_carro.html">Novo Carro</a></div>
+        <div class="nav-link"><a href="gerenciar_carros.html">Gerenciar</a></div>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Carros Disponíveis</h2>
+
+            <% if (listaCarros.length == 0) { %>
+                <p>Nenhum carro cadastrado.</p>
+            <% } %>
+
+            <% for (var i = 0; i < listaCarros.length; i++) { %>
+                <div class="carro-card">
+                    <div class="carro-info">
+                        <h3><%= listaCarros[i].marca %> <%= listaCarros[i].modelo %></h3>
+                        <p>Ano: <%= listaCarros[i].ano %></p>
+                        <% if (listaCarros[i].qtde_disponivel == 0) { %>
+                            <p class="esgotado">Esgotado</p>
+                        <% } else { %>
+                            <p>Quantidade: <%= listaCarros[i].qtde_disponivel %></p>
+                        <% } %>
+                    </div>
+
+                    <% if (listaCarros[i].qtde_disponivel > 0) { %>
+                        <form class="vender-form" action="/vender_carro" method="post">
+                            <input type="hidden" name="modelo" value="<%= listaCarros[i].modelo %>">
+                            <button type="submit">Vender</button>
+                        </form>
+                    <% } %>
+                </div>
+            <% } %>
+        </section>
+    </main>
+
+</body>
+</html>

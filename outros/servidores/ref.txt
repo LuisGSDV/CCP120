@@ -1,0 +1,1090 @@
+CC1620 - Desenvolvimento WebCCP120 - Programação Full Stack
+
+Não esqueçam de marcar presença!
+
+Servidor
+
+
+
+1969
+
+
+
+ArpaNet
+
+Em 1984, A Guerra Fria estava no seu fim e a ArpaNet foi dividida em dois grupos:
+MILNET: rede militar
+ARPANET: rede não-militar
+
+
+A internet
+
+
+
+
+
+
+Cliente
+
+
+
+Google Data Center - Carolina do Sul
+O Data Center é um ambiente projetado para abrigar servidores e outros componentes como sistemas de armazenamento de dados e ativos de rede (switches, roteadores, etc.)
+
+Servidor usando o Node.js
+
+
+
+
+Node.js
+
+
+
+É um interpretador de código JavaScript que funciona do lado do servidor
+Seu objetivo é ajudar programadores na criação de códigos capazes de manipular dezenas de milhares de conexões simultâneas, em uma única máquina física
+
+Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela empresa Joyent, onde Dahl trabalha
+https://nodejs.org/en/
+
+Pacotes
+
+Node.js - Pacotes
+
+
+
+No Node.js podemos utilizar pacotes:
+Pacotes são códigos em JavaScript prontos que lidam com certos tipos de domínios
+
+Existem diversos pacotes que já vêm com o Node.js 
+Para utilizar os pacotes, utilizamos o comando require
+	
+	require(“colors”);
+
+	console.log(“mensagem”.rainbow);
+
+O pacote colors fornece a função rainbow para imprimir colorido
+
+Node.js - Pacotes
+
+
+
+Apesar do Node.js já vir com vários pacotes, existem muitos outros na Internet!
+
+Esses pacotes podem ser baixados por meio de um programa, chamado npm (Node Package Manager), que gerencia pacotes do Node.js
+
+Node.js - Pacotes
+
+
+
+Para usar o npm, precisamos abrir o prompt do Windows, o terminal do Linux ou o terminal do WebStorm
+
+Para instalar um pacote utilizamos:
+
+
+Node.js - Pacotes
+
+
+
+Alguns pacotes:
+
+colors
+express
+url
+http
+fs
+
+
+Node.js - Pacote Express
+
+
+
+Framework Express:
+Express é aceita como a principal ferramenta para aplicações WEB pela maioria das comunidades Node.js
+Contém um robusto conjunto de recursos para desenvolver aplicações WEB 
+Um exemplo, é o intuitivo sistema de Views (da arquitetura MVC) 
+
+
+Parêntesis - Arquitetura MVC
+
+
+Arquitetura MVC
+É um padrão de arquitetura de software 
+MVC - Model-View-Controller  
+Em português, Modelo-Visualização-Controlador
+A ideia do MVC é separar a lógica de negócio da interface com o usuário:
+Assim, os programadores podem mudar facilmente cada parte, sem afetar as outras.
+
+Arquitetura MVC
+É uma arquitetura das mais antigas e, também, uma das mais utilizadas na WEB 
+
+Fonte: https://medium.com/trainingcenter/mvc-framework-usando-a-arquitetura-sem-c%C3%B3digo-de-terceiros-bf95a744c66d
+
+Fim dos Parêntesis
+
+
+Defina a pasta raiz do projeto: servidor (neste exemplo)
+Utilize o comando npm init (no terminal, na pasta raiz) para criar um arquivo package.json
+Instale os pacotes necessários: express (por enquanto, só este)
+Este passo criará a pasta node_modules
+Organização: Dentro da pasta do projeto, crie as pastas public e views:
+Servidor (Node.js + Express)
+Como começar um projeto
+
+Node.js - Pacote Express
+
+
+
+O primeiro passo para utilizar o express é a instalação
+Digite no terminal:
+
+
+Crie o arquivo servidor.js, que deve conter o código do servidor
+
+
+Exemplo: Criando um servidor com Node.js e Express
+
+
+
+
+Conteúdo 
+Estático vs. Dinâmico
+
+Estático vs. Dinâmico
+Estático
+Conteúdo inserido manualmente no código do site
+Sem banco de dados
+Sem Sistema Gerenciador de Conteúdo (Content Management System - CMS)
+Dinâmico
+Conteúdo inserido de maneira automática, por meio de scripts presentes no código do  servidor (JavaScript, PHP, Python, Ruby, Java etc)
+Com banco de dados
+Normalmente, utiliza um Sistema Gerenciador de Conteúdo (Content Management System - CMS): WordPress, Joomla
+
+
+Abra o navegador
+Para testar, você pode acessar o conteúdo disponibilizado pelo servidor (com servidor e navegador no mesmo PC) digitando o seguinte na barra de endereços:
+localhost:porta/pagina.html
+
+Para acessar o conteúdo disponibilizado pelo servidor de outro computador, utilizamos o IP do PC que está rodando o servidor:
+192.168.1.101:porta/pagina.html
+Acessando as páginas pelo servidor
+
+Git - .gitignore
+Antes de dar o commit das modificações realizadas nessa aula. Vamos falar um pouco sobre o .gitignore.
+O .gitignore é arquivo onde onde armazenamos uma lista de arquivos que dever ser ignorados no sistema de versionamento.
+Como puderam perceber, alguns arquivos vistos na aula de hoje são gerados automaticamente. Nesse caso, não precisamos armazená-los no git. Portanto, iremos ignorar a pasta node_modules do nosso projeto. 
+Basta criar o arquivo .gitignore na pasta do projeto e salvar dentro dele o seguinte comando:
+node_modules/*
+
+
+Vá além!
+Leia mais sobre Servidor com NodeJS
+https://www.w3schools.com/nodejs/default.asp
+
+Não esqueçam de marcar presença!
+
+Material desenvolvido por:
+Danilo Périco
+Isaac de Jesus
+Fagner Pimentel
+Fontes:
+https://www.w3schools.com/
+
+
+CC1620 - Desenvolvimento WebCCP120 - Programação Full Stack
+
+Não esqueçam de marcar presença!
+
+Servidor
+
+Para fazermos páginas dinâmicas, precisamos programar o servidor de forma que ele crie as páginas de acordo com a necessidade
+
+Para fazermos páginas dinâmicas, precisamos programar o servidor de forma que ele crie as páginas de acordo com a necessidade
+
+A necessidade pode ser transmitida pelo próprio usuário
+
+tag <form>
+A tag <form> cria formulários que possibilitam que o servidor possa receber informações do usuário.
+Dois atributos importantes:
+action / method
+
+tag <form> - action
+O atributo action:
+Quando o formulário for submetido, action vai especificar a URL para onde a informação deve ir 
+
+tag <form> - method
+O atributo method pode assumir, normalmente, dois valores: 
+get e post
+Os dois valores servem para enviar informações obtidas pelo formulário para o servidor
+
+tag <form> - method
+get:
+Com o get a informação vai na URL do documento. 
+Exemplo: o formulário tem o campo “nome”:
+ “fulano” é inserido no campo texto
+A URL vai ficar: www.dominosite.br/indice.html&nome=fulano
+
+tag <form> - method
+post:
+Com o post a informação também vai ser passada, mas não vai ser visível no URL
+A informação será inserida no corpo da página
+
+Exemplo em Aula
+get vs. post
+
+Como o servidor usa a informação que foi enviada?
+
+1° O servidor recebe a informação na URL definida no action do <form> 
+Se for get
+
+
+Se for post
+
+Para post, as seguintes linhas devem ser incluídas já no início do código do servidor :
+
+
+De forma simplificada, estas linhas dizem para o servidor que a informação recebida do site está inserida no corpo da página
+
+1° O servidor recebe a informação na URL definida no action do <form> 
+let bodyParser = require("body-parser")
+app.use(bodyParser.urlencoded({extended: false }))
+app.use(bodyParser.json())
+
+
+2° O servidor utiliza a informação para desenhar uma página dinâmica
+Isto é feito com o uso de templates:
+Templates são arquivos que combinam dados e um modelo predefinido para produzir HTML
+Alguns mecanismos de visualização de templates:
+EJS
+Jade
+
+Templates
+Effective JavaScript Templating - EJS
+EJS combina dados e um modelo para produzir HTML
+Usando o conceito de templates podemos produzir páginas dinâmicas
+
+Precisamos instalar o EJS
+npm install ejs
+
+Templates
+Effective JavaScript Templating - EJS
+No template feito com EJS, variáveis são identificadas com o uso das tags <%= nome_variavel %> 
+Podemos também inserir código no template, isso é feito com o uso das tags <% codigo %>
+
+Exemplo - EJS
+servidor
+
+
+
+Arquivo ‘resposta.ejs’
+Variável nome
+Variável login
+
+Exemplo - EJS
+É preciso inserir uma linha de código no servidor para utilizarmos o EJS:
+app.set('view engine', 'ejs')
+app.set('views', './views');
+Nesta linhas definimos que o mecanismo de visualização utilizado é o EJS e a pasta de busca é a views 
+
+
+Exemplo completo
+
+var http = require('http');
+var express = require('express');
+var colors = require('colors');
+var bodyParser = require('body-parser');
+
+var app = express();
+app.use(express.static('./public'));
+app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.json())
+app.set('view engine', 'ejs')
+app.set('views', './views');
+
+var server = http.createServer(app);
+server.listen(80);
+
+console.log('Servidor rodando ...'.rainbow);
+
+app.get('/', function (requisicao, resposta){
+resposta.redirect('home.html')
+})
+
+app.get('/inicio', function (requisicao, resposta){
+var nome = requisicao.query.info;
+console.log(nome);
+})
+
+app.post('/inicio', function (requisicao, resposta){
+var data = requisicao.body.data;
+console.log(data);
+})
+
+app.get('/cadastro',function (requisicao, resposta){
+var nome = requisicao.query.nome;
+var sobrenome = requisicao.query.sobrenome;
+var nascimento = requisicao.query.nascimento;
+var civil = requisicao.query.civil;
+
+resposta.render('resposta_cadastro', {nome, sobrenome, nascimento, civil})
+})
+Servidor.js
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<link href="estilo.css" rel="stylesheet">
+</head>
+
+<body>
+
+<h1> Servidor </h1>
+
+<h2>Formulálio (método: get , action: /inicio)</h2>
+<form action="/inicio" method="get">
+<p>Nome: <input type="text" name="info"></p>
+<input type="submit" value="Clique aqui!">
+</form>
+
+<h2>Fomulário (método: post, action: /inicio)</h2>
+<form action="/inicio" method="post">
+<p>Data: <input type="date" name="data"></p>
+<input type="submit" value="Clique aqui!">
+</form>
+
+<h2>Cadastrar usuário</h2>
+<form method="get" action="/cadastro">
+<p>Nome: <input type="text" name="nome"></p>
+<p>Sobrenome: <input type="text" name="sobrenome"></p>
+<p>Nascimento: <input type="date" name="nascimento"></p>
+<p>Estado civil: <input type="text" name="civil"></p>
+<input type="submit" value="Salvar">
+</form>
+
+</body>
+</html>
+public/home.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<link href="estilo.css" rel="stylesheet">
+</head>
+<body>
+<h1>Resposta para o usuário:</h1>
+
+<p>Nome: <%= nome %> </p>
+<p>Sobrenome: <%= sobrenome %> </p>
+<p>Nascimento: <%= nascimento %> </p>
+<p>Estado civil: <%= civil %> </p>
+
+</body>
+</html>
+views/resposta_cadastro.ejs
+
+Body{
+background-color: lightskyblue;
+}
+public/estilo.css
+
+Extra: Exemplo de FOR no EJS
+<body>
+<% for (var i =1; i <= tamanho;  i++ ) { %>
+   <div>
+       <%= i %>
+   </div>
+<% } %>
+</body>
+
+
+
+Não esqueçam de marcar presença!
+
+Material desenvolvido por:
+Danilo Périco
+Isaac de Jesus
+Fagner Pimentel
+Fontes:
+https://www.w3schools.com/
+https://www.w3schools.com/tags/ref_httpmethods.asp
+
+CC1620 - Desenvolvimento WebCCP120 - Programação Full Stack
+
+Não esqueçam de marcar presença!
+
+Banco de Dados
+
+Banco de Dados
+São coleções organizadas de dados que se relacionam de forma a criar algum sentido e dar mais eficiência durante uma pesquisa
+
+
+
+
+Banco de Dados
+Antigamente as empresas armazenavam informações em arquivos físicos
+
+Banco de Dados
+O surgimento e evolução dos computadores possibilitaram o armazenamento de dados de modo digital
+
+Banco de Dados
+Os BDs são de vital importância para empresas e se tornaram uma das principais peças dos sistemas de informação
+
+
+
+
+Banco de Dados
+
+Banco de Dados trata do problema de armazenamento e como recuperar eficientemente uma informação quando ela for necessária
+
+
+
+
+Principais Modelos de Banco de Dados
+
+
+
+
+
+Modelos de Banco de Dados
+Relacional
+Um banco de dados relacional organiza os dados em tabelas ou relações
+As linhas da tabela são chamadas de registros ou tuplas
+As colunas são chamadas de campo ou atributo
+SQL (Structured Query Language) Linguagem de Consulta Estruturada
+
+
+
+
+Modelos de Banco de Dados
+Relacional
+
+
+
+Produtos
+Código
+Descrição
+Valor
+01
+Teclado
+110,00
+02
+Monitor
+430,00
+03
+Mouse
+45,00
+Entidade
+Tupla
+Atributos
+
+Modelos de Banco de Dados
+Relacional - Limitações
+O modelo relacional foi desenvolvido em torno de 1970 por Edgar F. Codd (pesquisador da IBM)
+Contudo, a quantidade de informações que precisam ser armazenadas tem crescido muito (principalmente em aplicações Web) e os bancos relacionais podem sofrer com problemas de escalabilidade*
+
+
+
+*estar preparado para crescer / funcionar da mesma forma com mais trabalho
+
+Modelos de Banco de Dados
+Não Relacional
+A principal motivação para banco de dados não relacionais é a busca para resolução do problema de escalabilidade
+São modelados de formas diferentes das relações tabulares usadas nos bancos de dados relacionais
+NoSQL (Not only SQL)
+
+
+
+Sistemas de Gerenciamento de Banco de Dados (SGBDs)
+Um SGBD (Data Base Management System - DBMS) é o conjunto de softwares responsáveis pelo gerenciamento de um banco de dados
+O SGBD disponibiliza uma interface para que seus clientes possam incluir, alterar, consultar ou remover  dados previamente armazenados
+
+
+Sistemas de Gerenciamento de Banco de Dados (SGBDs)
+
+
+
+
+Relacionais
+Não Relacionais
+
+SGBDs Ranking
+
+
+
+Fonte: https://db-engines.com/en/ranking
+
+
+O Banco de Dados MongoDB
+Desenvolvido pela MongoDB Inc.
+Lançado em 2009
+Escrito em C++ / C / JavaScript
+É fácil de usar
+É flexível
+É multi-plataforma
+
+O Banco de Dados MongoDB
+É gratuito e tem código aberto (open-source)
+Armazena documentos:
+Orientado a Documentos
+(funciona de maneira parecida com a utilizada no projeto de Python - armazenando por arquivos)
+
+
+
+
+
+O Banco de Dados MongoDB
+Utiliza documentos JSON:
+Um documento representa toda a informação necessária no formato de um JSON
+Os documentos são agrupados em collections: 
+Um conjunto de collections forma um banco de dados
+
+
+
+
+
+O Banco de Dados MongoDB
+Podemos ter uma collection chamada Livros
+Dentro desta collection, podemos ter o seguinte documento no banco de dados, para representar um livro:
+
+
+
+
+
+MongoDB Online
+
+Como usar o MongoDB Online?
+
+Acesse a página:
+https://www.mongodb.com/cloud
+Crie uma conta grátis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Como usar o MongoDB Online?
+
+Quando finalizar a criação da conta, selecione a versão FREE e mude o nome do seu Cluster
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Como usar o MongoDB Online?
+
+Não esqueça de salvar o seu login e senha. Você vai precisar acessar o seu banco de dados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OBS.: Não precisa ser o mesmo login e senha da sua conta no site e você pode ter mais de um login e senha para acessar o BD
+
+Como usar o MongoDB Online?
+
+Adicione o IP 0.0.0.0/0 a lista de conexão do BD.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Como usar o MongoDB Online?
+
+Acesse sua base de dados (database), em seguida clique em Connect ao lado do nome do cluster que você criou. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Como usar o MongoDB Online?
+
+Selecione o modo de conexão: Drivers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Como usar o MongoDB Online?
+
+Instale o mongoDB na sua máquina usando o NPM e salve o endereço do seu BD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A versão que deve ser instalada é a 4.12. Use o seguinte comando:
+
+npm install mongodb@4.12
+
+
+No seu servidor:
+	Configurando a conexão
+var mongodb = require("mongodb");
+
+const MongoClient = mongodb.MongoClient;
+
+
+const uri = ` … `;
+
+
+const client = new MongoClient(uri, { useNewUrlParser: true });
+
+Essa string deve ser substituída pela string gerada para o seu banco de dados no site do MongoDB. Passo 3 da imagem no slide anterior.
+
+Banco de Dados  - MongoDB
+
+
+
+
+
+
+
+
+
+
+Vamos implementar as 4 operações básicas de um Banco de Dados! 
+
+Banco de Dados  - MongoDB
+
+CRUD:
+C = Create 	(Criação)
+R = Read		(Leitura ou Consulta)
+U = Update 	(Atualização)
+D = Delete		(Destruição ou Remoção)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Banco de Dados  - MongoDB
+
+Vamos aprender:
+Criar (Create) registros
+Consultar (Read) registros
+Veremos na próxima aula:
+Atualizar (Update) registros
+Apagar (Delete) registros
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CRUD no MongoDB Online
+
+Criando um banco e uma coleção:
+var dbo = client.db("exemplo_bd");
+var usuarios = dbo.collection("usuarios");
+
+
+https://www.w3schools.com/nodejs/nodejs_mongodb_create_db.asp
+https://www.w3schools.com/nodejs/nodejs_mongodb_createcollection.asp
+
+No seu servidor:
+	Salvando um usuário
+  app.post("/cadastrar_usuario", function(req, resp) {
+    var data = { db_nome: req.body.nome, db_login: req.body.login, db_senha: req.body.senha };
+
+    usuarios.insertOne(data, function (err) {
+      if (err) {
+        console.log(err);
+        resp.render('resposta_usuario.ejs', {resposta: "Erro ao cadastrar usuário!"})
+      }else {
+        resp.render('resposta_usuario.ejs', {resposta: "Usuário cadastrado com sucesso!"})        
+      };
+    });
+   
+  });
+https://www.w3schools.com/nodejs/nodejs_mongodb_insert.asp
+
+No seu servidor:
+	Buscando um usuário
+  app.post("/logar_usuario", function(req, resp) {
+    var data = {db_login: req.body.login, db_senha: req.body.senha };
+
+    usuarios.find(data).toArray(function(err, items) {
+      console.log(items);
+      if (items.length == 0) {
+        resp.render('resposta_usuario.ejs', {resposta: "Usuário/senha não encontrado!"})
+      }else if (err) {
+        resp.render('resposta_usuario.ejs', {resposta: "Erro ao logar usuário!"})
+      }else {
+        resp.render('resposta_usuario.ejs', {resposta: "Usuário logado com sucesso!"})        
+      };
+    });
+
+  });
+https://www.w3schools.com/nodejs/nodejs_mongodb_find.asp
+
+Não esqueçam de marcar presença!
+
+Material desenvolvido por:
+Danilo Périco
+Isaac de Jesus
+Fagner Pimentel
+Fontes:
+https://www.w3schools.com/
+
+CC1620 - Desenvolvimento WebCCP120 - Programação Full Stack
+
+Não esqueçam de marcar presença!
+
+MongoDB + Node.js
+
+MongoDB Compass Community
+
+
+O MongoDB Compass é uma interface gráfica que permite que você gerencie as informações armazenadas no banco de dados.
+
+O MongoDB Compass permite:
+
+Visualizar,
+Adicionar,
+Excluir documentos, coleções e bancos de dados inteiros
+
+MongoDB Compass Download
+https://www.mongodb.com/download-center?jmp=nav#compass
+Só se você já não instalou junto com o mongoDB
+
+Versão: Community Edition Stable
+
+
+Banco de Dados  - MongoDB
+
+
+
+
+
+
+
+
+
+
+Vamos implementar as 4 operações básicas de um Banco de Dados! 
+
+Banco de Dados  - MongoDB
+
+CRUD:
+C = Create 	(Criação)
+R = Read		(Leitura ou Consulta)
+U = Update 	(Atualização)
+D = Delete		(Destruição ou Remoção)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Banco de Dados  - MongoDB
+
+Vamos rever:
+Criar (Create) registros
+Consultar (Read) registros
+Vamos aprender:
+Atualizar (Update) registros
+Apagar (Delete) registros
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CRUD no MongoDB Online
+
+Criando um banco e uma coleção:
+var dbo = client.db("exemplo_bd");
+var usuarios = dbo.Collection("usuarios");
+
+
+https://www.w3schools.com/nodejs/nodejs_mongodb_create_db.asp
+https://www.w3schools.com/nodejs/nodejs_mongodb_createcollection.asp
+
+No seu servidor:
+	Salvando um usuário
+  app.post("/cadastrar_usuario", function(req, resp) {
+    var data = { db_nome: req.body.nome, db_login: req.body.login, db_senha: req.body.senha };
+
+    usuarios.insertOne(data, function (err) {
+      console.log(err)
+      if (err) {
+        resp.render('resposta_usuario', {resposta: "Erro ao cadastrar usuário!"})
+      }else {
+        resp.render('resposta_usuario', {resposta: "Usuário cadastrado com sucesso!"})        
+      };
+    });
+   
+  });
+https://www.w3schools.com/nodejs/nodejs_mongodb_insert.asp
+
+No seu servidor:
+	Buscando um usuário
+  app.post("/logar_usuario", function(req, resp) {
+    var data = {db_login: req.body.login, db_senha: req.body.senha };
+
+    usuarios.find(data).toArray(function(err, items) {
+      console.log(items);
+      if (items.length == 0) {
+        resp.render('resposta_usuario', {resposta: "Usuário/senha não encontrado!"})
+      }else if (err) {
+        resp.render('resposta_usuario', {resposta: "Erro ao logar usuário!"})
+      }else {
+        resp.render('resposta_usuario', {resposta: "Usuário logado com sucesso!"})        
+      };
+    });
+
+  });
+https://www.w3schools.com/nodejs/nodejs_mongodb_find.asp
+
+No seu servidor:
+	Atualizando um usuário
+  app.post("/atualizar_usuario", function(req, resp) {
+    var data = { db_login: req.body.login, db_senha: req.body.senha };
+    var newData = { $set: {db_senha: req.body.novasenha} };
+
+    usuarios.updateOne(data, newData, function (err, result) {
+      console.log(result);
+      if (result.modifiedCount == 0) {
+        resp.render('resposta_usuario', {resposta: "Usuário/senha não encontrado!"})
+      }else if (err) {
+        resp.render('resposta_usuario', {resposta: "Erro ao atualizar usuário!"})
+      }else {
+        resp.render('resposta_usuario', {resposta: "Usuário atualizado com sucesso!"})        
+      };
+    });
+   
+  });
+https://www.w3schools.com/nodejs/nodejs_mongodb_update.asp
+
+No seu servidor:
+	Removendo um usuário
+   
+  app.post("/remover_usuario", function(req, resp) {
+    var data = { db_login: req.body.login, db_senha: req.body.senha };
+   
+    usuarios.deleteOne(data, function (err, result) {
+      console.log(result);
+      if (result.deletedCount == 0) {
+        resp.render('resposta_usuario', {resposta: "Usuário/senha não encontrado!"})
+      }else if (err) {
+        resp.render('resposta_usuario', {resposta: "Erro ao remover usuário!"})
+      }else {
+        resp.render('resposta_usuario', {resposta: "Usuário removido com sucesso!"})        
+      };
+    });
+
+  });
+https://www.w3schools.com/nodejs/nodejs_mongodb_delete.asp
+
+Web API
+
+Web API
+
+API: Application Programming Interface - Interface de Programação de Aplicações 
+Conjunto de padrões que uma aplicação disponibiliza para que outras aplicações possam utilizar suas funcionalidades 
+Troca de informações entre softwares, sem envolver pessoas diretamente
+
+
+
+
+
+
+Web API
+
+Temos APIs para o navegador e também do lado do servidor
+Exemplo para o navegador: API para desenhar e manipular elementos gráficos: Elemento <canvas>
+Uma Web API server-side é uma interface consistente para um sistema definido de mensagens request-response (requisição-resposta), tipicamente expressado em JSON ou XML, que é exposto via a internet
+
+
+
+
+Web API
+
+Podemos utilizar o json() para retornar os dados solicitados como um arquivo
+JSON - JavaScript Object Notation - é um formato compacto de troca de dados simples e rápida entre sistemas que utiliza texto legível para os humanos
+
+
+
+Web API
+
+Exemplo de JSON:
+
+
+Web API
+
+Podemos dar como resposta a uma requisição o arquivo json contendo tudo o que foi solicitado:
+
+
+
+
+
+
+
+Web API
+
+Testando a API com um programa em Python:
+
+
+
+
+
+
+
+Web API
+
+Testando a API do site do IBGE:
+Link: https://servicodados.ibge.gov.br/api/v1/censos/nomes
+
+
+
+
+
+
+Não esqueçam de marcar presença!
+
+Material desenvolvido por:
+Danilo Périco
+Isaac de Jesus
+Fagner Pimentel
+Fontes:
+https://www.w3schools.com/

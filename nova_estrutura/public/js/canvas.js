@@ -136,6 +136,13 @@ function semicirculo(x, y, r, c ,f, cor){
 canvas2 = document.getElementById('canvas2');
 ctx2 = canvas2.getContext('2d');
 
+// fundo branco
+
+ctx2.beginPath();
+ctx2.fillStyle = "white";
+ctx2.fillRect(0, 0, 300, 300);
+ctx2.closePath();
+
 semicirculo(150, 150, 72, 1.75, 2, 'green');
 semicirculo(150, 150, 72, 3, 3.25, 'green');
 semicirculo(150, 150, 48, 3, 2, 'green');
