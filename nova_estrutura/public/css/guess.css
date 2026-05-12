@@ -20,11 +20,14 @@ body{
 #cont{
 
     position: relative;
-    height: 100%;
-    width: 100%;
+    height: max-content;
+    width: max-content;
     top: 25%;
     position: relative;
     justify-items: center;
+    background-color:rgb(94, 94, 244);
+    margin: 0 auto;
+    padding: 20px;
 
 }
 

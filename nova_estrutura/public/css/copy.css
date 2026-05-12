@@ -1,24 +1,135 @@
 body{
-    display: flex;
-    justify-content: center;
-    width: 98vw;
-    height: 98vh;
+    background-color: lightgray;
+    font-family: serif;
 }
 
 .main-cont{
-    width: 80vw;
-    height: 100%;
-}
-
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 10vh;
     width: 100%;
 }
 
+header{
+    background-color: bisque;
+    border: 4px solid blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
 header img{
-    position: relative;
-    height: 100%;
+    width: 120px;
+}
+
+header h1{
+    color: darkgreen;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav{
+    
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 12px 0;
+}
+
+nav p{
+    color: darkred;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+main{
+    text-align: center;
+    padding: 20px;
+}
+
+main h3{
+    font-size: 28px;
+    margin: 25px 0;
+    color: black;
+}
+
+main p{
+    color: indigo;
+    font-size: 18px;
+    line-height: 1.4;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.img-livros{
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.img-livros img{
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.info-fei{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.info-fei iframe{
+    width: 320px;
+    height: 260px;
+}
+
+table{
+    margin: 30px auto;
+    border: 4px dashed red;
+    border-spacing: 3px;
+}
+
+th, td{
+    border: 1px solid red;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+th{
+    color: red;
+}
+
+.links{
+    background-color: yellow;
+    width: 350px;
+    margin: 40px auto;
+    padding: 15px;
+    text-align: left;
+}
+
+.links ul{
+    margin-left: 20px;
+}
+
+footer{
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    margin-top: 50px;
+}
+
+footer img{
+    width: 90px;
+}
+
+.footer-text{
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 18px;
 }
