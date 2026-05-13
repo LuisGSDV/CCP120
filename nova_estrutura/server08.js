@@ -12,7 +12,7 @@ app.set('views', './views');
 var server = http.createServer(app);
 server.listen(80);
 
-console.log("servidor rodando :)")
+console.log("servidor rodando:)")
 
 app.get('/', function (req, resp){
     resp.redirect("cadastro.html")
@@ -26,3 +26,9 @@ app.get('/cadastra',function (req, resp){
 resp.render('resp_cad', {nome, email, senha})
 })
 
+app.get('/login', function (req, resp){
+    var email = req.query.email
+    var senha = req.query.senha
+
+resp.render('resp_login.ejs')
+})

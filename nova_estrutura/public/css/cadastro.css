@@ -9,21 +9,20 @@ body {
     margin: 0;
 }
 
-.cont-cad {
+.cont-cad, .cont-log {
     background-color: #1b263b;
     border: 1px solid #415a77;
     padding: 40px 50px;
 }
 
-.cont-cad p {
+.cont-cad p, .cont-log p{
     color: #a0aec0;
     margin-bottom: 4px;
     font-size: 14px;
 }
 
-.cont-cad input[type="text"],
-.cont-cad input[type="email"],
-.cont-cad input[type="password"] {
+
+.cont-cad input, .cont-log input{
     width: 100%;
     padding: 8px 10px;
     background-color: #0d1b2a;
@@ -32,9 +31,10 @@ body {
     font-size: 14px;
     margin-bottom: 14px;
     outline: none;
+    box-sizing: border-box;
 }
 
-.cont-cad input[type="submit"] {
+.btn {
     background-color: #415a77;
     color: #e0e6ed;
     border: none;
@@ -44,6 +44,6 @@ body {
     margin-top: 6px;
 }
 
-.cont-cad input[type="submit"]:hover {
+.btn:hover {
     background-color: #5a7a9e;
 }
