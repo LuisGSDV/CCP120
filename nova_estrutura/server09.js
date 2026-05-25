@@ -19,12 +19,12 @@ var uri = "mongodb+srv://luisgsdv:db1234@cluster0.dvqrmmu.mongodb.net/";
 var posts;
 
 
-    var client = new MongoClient(uri, {
+var client = new MongoClient(uri, {
     useNewUrlParser: true,
 });
 
     // Conecta ao BD e só então sobe o servidor
-    client.connect(function(err) {
+client.connect(function(err) {
     if (err) {
         console.log("Erro ao conectar no BD: " + err);
     } else {
